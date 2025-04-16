@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lo Luppolo - Birrificio Artigianale</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2e8b57;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      background-color: #444;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      margin-top: 20px;
+    }
+    h2 {
+      color: #2e8b57;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    button {
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lo Luppolo</h1>
+    <p>Dove la birra è arte, e ogni sorso racconta Milano.</p>
+  </header>
+  <nav>
+    <a href="#">Chi siamo</a>
+    <a href="#" onclick="showSection('prodotti')">Prodotti</a>
+    <a href="#" onclick="showSection('servizi')">Servizi</a>
+    <a href="#" onclick="showSection('contatti')">Contatti</a>
+  </nav>
+
+  <section id="contenuto">
+    <h2>Benvenuto a Lo Luppolo!</h2>
+    <p>Fondata a Milano, Lo Luppolo è un birrificio artigianale nato dalla passione per la birra e per la qualità. Il nostro obiettivo è creare birre uniche, utilizzando ingredienti selezionati e processi sostenibili.</p>
+    <p><strong>Missione:</strong> Produrre birre eccezionali che raccontano una storia.</p>
+    <p><strong>Visione:</strong> Diventare un punto di riferimento nella birra artigianale.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Lo Luppolo - Tutti i diritti riservati</p>
+  </footer>
+
+  <script>
+    function showSection(section) {
+      const contenuto = document.getElementById('contenuto');
+      let html = '';
+
+      if (section === 'prodotti') {
+        html = `
+          <h2>Prodotti</h2>
+          <ul>
+            <li><strong>Luppolo Lager:</strong> Lager fresca e leggera.</li>
+            <li><strong>Citra IPA:</strong> IPA aromatica con note fruttate tropicali.</li>
+            <li><strong>Amber Ale:</strong> Birra ambrata, morbida e caramellata.</li>
+            <li><strong>Birre Stagionali:</strong> Specialità in edizione limitata.</li>
+          </ul>`;
+      } else if (section === 'servizi') {
+        html = `
+          <h2>Servizi</h2>
+          <ul>
+            <li>Visite guidate al birrificio</li>
+            <li>Degustazioni con esperti</li>
+            <li>Vendita diretta e online</li>
+            <li>Forniture per eventi e feste</li>
+            <li>Collaborazioni su misura</li>
+          </ul>`;
+      } else if (section === 'contatti') {
+        html = `
+          <h2>Contatti</h2>
+          <p><strong>Indirizzo:</strong> Via Milano 123, Milano</p>
+          <p><strong>Telefono:</strong> +39 123 456 789</p>
+          <p><strong>Email:</strong> info@lolluppolo.com</p>
+          <p><strong>Instagram:</strong> @lo_luppolo</p>`;
+      }
+
+      contenuto.innerHTML = html;
+    }
+  </script>
+</body>
+</html>
